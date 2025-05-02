@@ -1,5 +1,4 @@
 <?php
-require_once 'includes/init.php';
 
 session_start();
 // Validar que el usuario esté logueado y tenga rol 'normal'

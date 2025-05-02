@@ -1,5 +1,12 @@
-<?php session_start(); require_once 'includes/init.php';?>
+<?php
+require_once 'includes/init.php';  // Incluir el archivo de sesión
 
+// Aquí puedes verificar si ya está iniciada una sesión y redirigir si es necesario
+if (isset($_SESSION['id'])) {
+    header('Location: usuario_dashboard.php');  // Redirigir si ya está logueado
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,16 +43,3 @@
 </div>
 </body>
 </html>
-
-<?php
-// Redirigir al panel correspondiente si ya está logueado
-if (isset($_SESSION['id'])) {
-    // Verificar el rol del usuario
-    if ($_SESSION['rol'] === 'admin') {
-        header("Location: admin_dashboard.php");
-    } else {
-        header("Location: usuario_dashboard.php");
-    }
-    exit();
-}
-?>

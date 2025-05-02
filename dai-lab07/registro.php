@@ -11,14 +11,6 @@
     <div class="card mx-auto" style="max-width: 400px;">
         <div class="card-header text-center"><h3>Registro</h3></div>
         <div class="card-body">
-            <!-- Mensajes de error o éxito -->
-            <?php if (isset($_SESSION['error'])): ?>
-                <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
-            <?php endif; ?>
-            <?php if (isset($_SESSION['success'])): ?>
-                <div class="alert alert-success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
-            <?php endif; ?>
-
             <form action="registrar.php" method="post">
                 <div class="mb-3">
                     <label>Nombre</label>

@@ -1,0 +1,15 @@
+CREATE DATABASE EXM_02; 
+
+USE EXM_02;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL
+);
+
+
+INSERT INTO usuarios (nombre, correo) VALUES 
+('Ana Torres', 'ana@example.com'),
+('Luis García', 'luis@example.com'),
+('María Pérez', 'maria@example.com');
